@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.inject.Inject;
-import java.util.List;
-import java.util.concurrent.atomic.AtomicLong;
 
 @Controller
 @RequestMapping("/user")
@@ -22,7 +20,7 @@ public class UserController {
     @RequestMapping(method = RequestMethod.GET)
     public
     @ResponseBody
-    List<User> getUsers() {
+    Iterable<User> getUsers() {
         return userService.getAllUsers();
     }
 

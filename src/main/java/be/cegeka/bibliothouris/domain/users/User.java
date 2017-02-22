@@ -1,9 +1,18 @@
 package be.cegeka.bibliothouris.domain.users;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 
-    private final long id;
-    private final String name;
+    @Id
+    private long id;
+    private String name;
+
+    User(){
+
+    }
 
     public User(long id, String name) {
         this.id = id;
